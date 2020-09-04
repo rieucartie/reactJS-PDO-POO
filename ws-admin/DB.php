@@ -12,7 +12,7 @@ class DB
     {
       
        $usermysql=   "root";
-       $passwordmysql   = "mightor09140";
+       $passwordmysql   = "";
        $dbnamemysql   = "wsadmindb";
        $hostmysql="localhost"; 
 	   $dns='mysql:host=localhost;dbname=wsadmindb;';
