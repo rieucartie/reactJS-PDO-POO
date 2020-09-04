@@ -29,8 +29,9 @@ class UserDB extends DB
 		$sql="SELECT `id`, `nom`, `prenom`, `email`, `password`, `status` FROM `user` WHERE  `id`='". $id."'";
         return  $this->db->prepare($sql)->fetch();
     }
- public function getAll()
+ public function getall()
     {
+      $sql="SELECT `id`, `nom`, `prenom`, `email`, `password` FROM `user` ";
       return  $this->db->query($sql)->fetchAll();
     }
 }
