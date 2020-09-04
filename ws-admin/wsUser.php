@@ -11,7 +11,7 @@
 
  switch($method)
  {
-	/*case "GET":
+	 case "GET":
 		$action=$_GET['action'];
 			switch($action)
 			{
@@ -56,9 +56,9 @@
 				$resultat=$userdb->update($user);
 				break;
 
-				case "getAll":
+				case "getall":
 				$userdb=new UserDB();
-				$users=$userdb->getAll();
+				$users=$userdb->getall();
 				$userArray=array();
 				foreach($users as $user){
 					$userArray[]=array(
@@ -67,15 +67,16 @@
 					'prenom'=>$user[2]  ,
 					'email'=>$user[3],
 					'password'=>$user[4],
-					'status'=>$user[5] 
+					 
 					);
 				}
-				echo json_encode(array( $userArray));
+				
+				echo json_encode($userArray);
 				break;
 				
 		}
 	break;
-		*/
+		 
 		  case "POST":
 			
 		  $userdb=new UserDB();
