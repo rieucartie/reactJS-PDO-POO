@@ -19,19 +19,26 @@ class UserDB extends DB
     }
 	 public function update(User $user)
     {
-       $sql="UPDATE user SET nom ='". $user->getNom()."',prenom='". $user->getPrenom()."',email='". $user->getEmail()."',password='". $user->getPassword()."',status='". $user->getStatus()."')
+       $sql="UPDATE user SET nom ='". $user->getNom()."',prenom='". $user->getPrenom()."',email='". $user->getEmail()."',password='". $user->getPassword()."'
 	   where id='". $user->getId()."'
 	   ";
        return  $this->db->exec($sql);
     }
  public function get($id)
     {
-		$sql="SELECT `id`, `nom`, `prenom`, `email`, `password`, `status` FROM `user` WHERE  `id`='". $id."'";
-        return  $this->db->prepare($sql)->fetch();
+      $sql="SELECT * FROM `user` WHERE  `id`='". $id."'";
+ 
+        return  $this->db->query($sql)->fetch();
     }
  public function getall()
     {
-      $sql="SELECT `id`, `nom`, `prenom`, `email`, `password` FROM `user` ";
+      $sql="SELECT * FROM `user` ";
       return  $this->db->query($sql)->fetchAll();
+    }
+    public function delete($id)
+    {
+      $sql="delete  FROM `user` WHERE  `id`='". $id."'";
+ 
+      return  $this->db->exec($sql);
     }
 }

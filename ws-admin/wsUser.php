@@ -25,20 +25,14 @@
 					'nom'=>$user[1],
 					'prenom'=>$user[2],
 					'email'=>$user[3],
-					'password'=>$user[4],
-					'status'=>$user[5] 
+					'password'=>$user[4]
 					);
 				echo json_encode($userArray); 
 				break; 
 				
 				case "delete":
 				$id=$_GET['id'];
-				$user->setNom($_GET['nom']);
-				$user->setPrenom($_GET['prenom']);
-				$user->setEmail($_GET['email']);
-				$user->setPassword($_GET['password']);
-				$user->setStatus($_GET['status']);
-				$resultat=$userdb->add($user);
+				$userdb=new UserDB();
 				$resultat=$userdb->delete($id);
 				echo json_encode(array('result'=> $resultat));
 				break;
@@ -47,12 +41,12 @@
 				$id=$_GET['id'];
 				$userdb=new UserDB();
 				$user=new User();
-				$user->setId($_GET['id']);
+				 $user->setId($_GET['id']); 
 				$user->setNom($_GET['nom']);
 				$user->setPrenom($_GET['prenom']);
 				$user->setEmail($_GET['email']);
 				$user->setPassword($_GET['password']);
-				$user->setStatus($_GET['status']);
+				// $user->setStatus($_GET['status']);
 				$resultat=$userdb->update($user);
 				break;
 

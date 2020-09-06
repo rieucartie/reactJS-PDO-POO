@@ -42,9 +42,9 @@ export default class ListeUser extends React.Component
               <td>{ user.prenom}</td>
               <td>{ user.email}</td>
               <td>
-                  <a  href={"/user/get"+user.id}>Modifier</a>
+                  <a  href={"/user/get/"+user.id}>Modifier</a>
               </td>
-              <td> <a  href={"/user/delete"+user.id}>Supprimer</a></td>
+              <td> <a  href={"/user/delete/"+user.id}>Supprimer</a></td>
           </tr>
         )
       })

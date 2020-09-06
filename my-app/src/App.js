@@ -10,10 +10,10 @@ export default class App extends React.Component{
         <ul className="navbar-nav mr-auto">
          
           <li className="nav-item">
-            <a className="nav-link" href={"/add"}>Ajout</a>
+            <a className="nav-link" href={"/user/ajout"}>Ajout</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href={"/users"}>Liste</a>
+            <a className="nav-link" href={"/user/liste"}>Liste</a>
           </li>
          
          

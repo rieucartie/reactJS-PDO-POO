@@ -15,10 +15,10 @@ const routing = (
   <Router>
     <div>
       <Route path="/" component={App} />
-      <Route path="/edit/:id" component={EditUser} />
-      <Route path="/add" component={AddUser} />
-      <Route path="/delete/:id" component={DeleteUser} />
-      <Route path="/users" component={ListeUser} />
+      <Route path="/user/get/:id" component={EditUser} />
+      <Route path="/user/ajout" component={AddUser} />
+      <Route path="/user/delete/:id" component={DeleteUser} />
+      <Route path="/user/liste" component={ListeUser} />
     </div>
   </Router>
 )
